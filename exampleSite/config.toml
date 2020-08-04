@@ -6,35 +6,7 @@ languageCode = "en-US"
 language = "en"
 title = "Wilson Example Site"
 themesdir = "../.."
-
-[module]
-  [module.hugoVersion]
-    extended = true
-
-  [[module.imports]]
-    disable = false
-    ignoreConfig = false
-    path = "github.com/craftyphotons/wilson"
-
-  [[module.mounts]]
-    source = "content"
-    target = "content"
-
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-
-  [[module.mounts]]
-    source = "layouts"
-    target = "layouts"
-
-  [[module.mounts]]
-    source = "data"
-    target = "data"
-
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
+theme = "wilson"
 
 [permalinks]
   articles = "articles/:slug/"

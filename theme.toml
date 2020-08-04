@@ -1,0 +1,12 @@
+name = "wilson"
+license = "MIT"
+licenselink = "https://github.com/craftyphotons/wilson/blob/master/LICENSE.md"
+description = "The Hugo theme for tonyburns.net"
+homepage = "https://github.com/craftyphotons/wilson"
+tags = ["blog", "technical", "personal"]
+features = ["blog", "technical", "personal"]
+min_version = "0.73"
+
+[author]
+    name = "Tony Burns"
+    homepage = "https://tonyburns.net"
