@@ -1,0 +1,22 @@
+baseurl = "/"
+enableGitInfo = true
+enableRobotsTXT = true
+editor = "code"
+languageCode = "en-US"
+language = "en"
+title = "Wilson Example Site"
+themesdir = "../.."
+
+[module]
+  [module.hugoVersion]
+    extended = true
+
+  [[module.imports]]
+    disable = true
+    ignoreConfig = true
+    path = "github.com/craftyphotons/wilson"
+
+[permalinks]
+  articles = "articles/:slug/"
+  notes = "notes/:slug/"
+  photos = "photos/:slug/"
