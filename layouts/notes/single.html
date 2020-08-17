@@ -36,7 +36,7 @@
                           <a href="{{ .Permalink }}" class="has-text-dark u-url">
                             <time class="dt-published"
                               datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
-                              {{- dateFormat "15:04 MST • Jan 2, 2006" .Date -}}
+                              {{- dateFormat "15:04 MST • Jan 2, 2006" .Date.Local -}}
                             </time>
                           </a>
                         </small>
