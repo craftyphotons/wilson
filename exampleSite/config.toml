@@ -8,6 +8,8 @@ title = "Wilson Example Site"
 themesdir = "../.."
 theme = "wilson"
 
+disablePathToLower = true
+
 [permalinks]
   articles = "articles/:slug/"
   notes = "notes/:slug/"
