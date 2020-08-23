@@ -1,13 +1,29 @@
 {{ define "main" }}
 {{ partial "nav.html" . }}
 <main id="main" aria-role="main">
-  <div class="container pl-2 pr-2">
+  <div class="container pb-6">
     <div class="columns is-centered">
       <div class="column is-half">
-        <article class="h-entry">
-          <div class="content e-content">
-            <header class="mb-6">
-              <h1 class="u-name">{{ .Param "name" }}</h1>
+        {{ $pag := .Paginator 10 }}
+
+        {{ if eq 0 $pag.TotalNumberOfElements }}
+        <div class="hero">
+          <div class="hero-body">
+            <h1 class="subtitle has-text-centered">Nothing to see here yet!</h1>
+          </div>
+        </div>
+        {{ end }}
+
+        {{ if ne 0 $pag.TotalNumberOfElements }}
+        {{ range $pag.Pages }}
+        <article class="h-entry mb-6">
+          <div class="columns">
+            <div class="column is-three-fifths">
+              <div class="content">
+                <h1 class="title u-name"><a href="{{ .Permalink }}" class="has-text-dark u-url">{{ .Param "name" }}</a>
+                </h1>
+                <p>{{ .Param "summary" }}</p>
+              </div>
 
               <div class="media">
                 <div class="media-content">
@@ -36,21 +52,21 @@
                   </div>
                 </div>
               </div>
-            </header>
-
-            {{ if isset .Params "featured" }}
-            {{ with .Param "featured" }}
-            <figure class="image">
-              <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
-            </figure>
-            {{ end }}
-            {{ end }}
-
-            <div class="e-content">
-              {{- .Content -}}
+            </div>
+            <div class="column is-two-fifths">
+              {{ if isset .Params "featured" }}
+              {{ with .Param "featured" }}
+              <figure class="image">
+                <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+              </figure>
+              {{ end }}
+              {{ end }}
             </div>
           </div>
         </article>
+        {{ end }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
       </div>
     </div>
   </div>
