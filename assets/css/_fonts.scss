@@ -1,0 +1,201 @@
+$webfonts-path: "../webfonts" !default;
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro"),
+    url("#{$webfonts-path}/SourceSansPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Italic"),
+    url("#{$webfonts-path}/SourceSansPro-It.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro ExtraLight"),
+    url("#{$webfonts-path}/SourceSansPro-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro ExtraLight Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro ExtraLight Italic"),
+    url("#{$webfonts-path}/SourceSansPro-ExtraLightIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Light"),
+    url("#{$webfonts-path}/SourceSansPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Light Italic"),
+    url("#{$webfonts-path}/SourceSansPro-LightIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Semibold"),
+    url("#{$webfonts-path}/SourceSansPro-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Semibold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Semibold Italic"),
+    url("#{$webfonts-path}/SourceSansPro-SemiboldIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Bold"),
+    url("#{$webfonts-path}/SourceSansPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Bold Italic"),
+    url("#{$webfonts-path}/SourceSansPro-BoldIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Black"),
+    url("#{$webfonts-path}/SourceSansPro-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Sans Pro Black Italic"),
+    url("#{$webfonts-path}/SourceSansPro-BlackIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro Regular"),
+    url("SourceSerifPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro ExtraLight"),
+    url("SourceSerifPro-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro Light"),
+    url("SourceSerifPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro SemiBold"),
+    url("SourceSerifPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro Bold"),
+    url("SourceSerifPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Serif Pro Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Serif Pro Black"),
+    url("SourceSerifPro-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro"),
+    url("#{$webfonts-path}/SourceCodePro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro ExtraLight"),
+    url("#{$webfonts-path}/SourceCodePro-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro Light"),
+    url("#{$webfonts-path}/SourceCodePro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro"),
+    url("#{$webfonts-path}/SourceCodePro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro Semibold"),
+    url("#{$webfonts-path}/SourceCodePro-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro Bold"),
+    url("#{$webfonts-path}/SourceCodePro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Code Pro Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Source Code Pro Black"),
+    url("#{$webfonts-path}/SourceCodePro-Black.woff") format("woff");
+}

@@ -26,10 +26,11 @@ $red: hsl(348, 86%, 61%) !default;
 
 // Typography
 
-$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  "Helvetica", "Arial", sans-serif !default;
-$family-monospace: monospace !default;
+$family-sans-serif: "Source Sans Pro", sans-serif;
+$family-monospace: "Source Code Pro", monospace;
+$family-code: $family-monospace;
+$family-primary: $family-sans-serif;
+$family-secondary: "Source Serif Pro", serif;
 $render-mode: optimizeLegibility !default;
 
 //$fa-font-path: "../webfonts";
