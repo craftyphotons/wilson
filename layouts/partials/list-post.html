@@ -18,14 +18,14 @@
   {{ end }}
   {{ partial "post-citations.html" . }}
   <div class="card-content">
-    {{ if or (ne .Content "") (ne (.Summary) "") }}
+    {{ if or (ne .Content "") (isset .Params "summary") }}
     <div class="content">
       {{ if eq .Type "articles" }}
       <h1 class="title u-name">
         <a href="{{ .Permalink }}" class="has-text-dark">{{ .Param "name" }}</a>
       </h1>
       {{ end }}
-      {{ if ne .Summary "" }}
+      {{ if isset .Params "summary" }}
       <p class="p-summary">{{ .Param "summary" }}</p>
 
       <p><a href="{{ .Permalink }}" title="Continue Reading" class="button is-link is-small">Continue
