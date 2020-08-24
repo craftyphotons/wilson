@@ -22,8 +22,20 @@
 </head>
 
 <body>
+  {{ if not .IsHome }}
   {{ partial "site-header.html" . }}
+  <main id="main" aria-role="main">
+    <div class="container pb-6">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          {{- block "main" . }}{{- end }}
+        </div>
+      </div>
+    </div>
+  </main>
+  {{ else }}
   {{- block "main" . }}{{- end }}
+  {{ end }}
   {{ partial "site-footer.html" . }}
 </body>
 

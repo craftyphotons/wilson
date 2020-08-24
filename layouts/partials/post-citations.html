@@ -1,0 +1,34 @@
+{{ if in (.Param "citationTypes") .Type }}
+<blockquote class="card-content has-background-light u-in-reply-to h-cite">
+  <p class="is-size-6 mb-1">
+    <cite>
+      <a href="{{ .Param "cite.author.url" }}"
+        class="h-card p-author p-name u-url has-text-weight-semibold has-text-dark">
+        {{ .Param "cite.author.name" }}
+      </a>
+
+      {{ $url := urls.Parse (.Param "cite.uid") }}
+      {{ if ne (.Param "cite.name") "" }}
+      <a href="{{ .Param "cite.uid" }}" class="u-url p-name has-text-grey"
+        title="{{ .Param "cite.name" }}">{{ $url.Host }}</a>
+      {{ else }}
+      <a href="{{ .Param "cite.uid" }}" class="u-url p-name has-text-grey"
+        title="{{ .Param "cite.uid" }}">{{ $url.Host }}</a>
+      {{ end }}
+    </cite>
+  </p>
+  <p class="mb-1 is-size-6 p-content">
+    {{- .Param "cite.content" -}}
+  </p>
+  <p class="is-size-7 has-text-grey">
+    <time class="dt-published"
+      datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" (time (.Param "cite.published")).UTC }}">
+      {{- dateFormat "15:04 MST • Jan 2, 2006" (time (.Param "cite.published")).Local -}}
+    </time>
+    •
+    <a href="{{ .Param "cite.uid" }}" class="has-text-grey">
+      <span class="icon"><i class="fas fa-link"></i></span>
+    </a>
+  </p>
+</blockquote>
+{{ end }}

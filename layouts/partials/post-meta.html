@@ -1,0 +1,48 @@
+<div class="content">
+  {{ if isset .Params "categories" }}
+  <div class="tags">
+    {{ range (.Param "categories") }}
+    <span class="tag">#<span class="p-category">{{ . }}</span></span>
+    {{ end }}
+  </div>
+  {{ end }}
+  <div class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <p>
+          <a href="/{{ .Type }}" title="{{ .Type | singularize | title }}" class="has-text-dark">
+            <span class="icon">
+              {{ if eq .Type "notes" }}
+              <i class="fas fa-sticky-note"></i>
+              {{ else if eq .Type "articles" }}
+              <i class="fas fa-file-alt"></i>
+              {{ else if eq .Type "photos" }}
+              <i class="fas fa-camera"></i>
+              {{ else if eq .Type "likes" }}
+              <i class="fas fa-heart"></i>
+              {{ else if eq .Type "reposts" }}
+              <i class="fas fa-retweet"></i>
+              {{ else if eq .Type "replies" }}
+              <i class="fas fa-reply"></i>
+              {{ else if eq .Type "bookmark" }}
+              <i class="fas fa-bookmark"></i>
+              {{ end }}
+            </span>
+          </a>
+          •
+          <time class="dt-published" datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .PublishDate.UTC }}">
+            {{- dateFormat "15:04 MST • Jan 2, 2006" .PublishDate.Local -}}
+          </time>
+          •
+          <a href="{{ .Permalink }}" class=" u-uid" title="Permalink">
+            <span class="icon has-text-dark">
+              <i class="fas fa-link"></i>
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="level-right">
+    </div>
+  </div>
+</div>

@@ -1,38 +1,50 @@
 {{ define "main" }}
-<main id="main" aria-role="main">
-  <section id="about" class="hero is-medium is-light h-card">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class="columns is-centered">
-          <div class="level">
-            <div class="level-item">
-              <figure class="image is-128x128 mr-2">
-                <img class="is-rounded u-photo" src="img/avatar-square.jpg">
-              </figure>
-            </div>
+<section id="about" class="hero is-medium is-light h-card">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns is-centered">
+        <div class="level">
+          <div class="level-item">
+            <figure class="image is-128x128 mr-2">
+              <img class="is-rounded u-photo" src="/img/avatar-square.jpg">
+            </figure>
           </div>
         </div>
-        <h1 class="title u-name">Tony Burns</h1>
-        <h2 class="subtitle"><i><span class="u-nickname">@craftyphotons</span></i></h2>
-        <h2 class="subtitle">Software Engineer • Author • Photographer</h2>
-        <p>
-          <a class="has-text-dark u-email" href="mailto:tony@tonyburns.net" rel="me"><i
-              class="far fa-envelope fa-2x"></i></a>
-          &nbsp;
-          <a class="has-text-dark u-url" href="https://www.linkedin.com/in/tonyhburns/" rel="me"><i
-              class="fab fa-linkedin fa-2x"></i></a>
-          &nbsp;
-          <a class="has-text-dark u-url" href="https://github.com/craftyphotons" rel="me"><i
-              class="fab fa-github fa-2x"></i></a>
-          &nbsp;
-          <a class="has-text-dark u-url" href="https://twitter.com/craftyphotons" rel="me"><i
-              class="fab fa-twitter fa-2x"></i></a>
-          &nbsp;
-          <a class="has-text-dark u-url" href="https://instagram.com/craftyphotons" rel="me"><i
-              class="fab fa-instagram fa-2x"></i></a>
-        </p>
+      </div>
+      <h1 class="title u-name">Tony Burns</h1>
+      <h2 class="subtitle"><i><span class="u-nickname">@craftyphotons</span></i></h2>
+      <h2 class="subtitle">Software Engineer • Author • Photographer</h2>
+      <p>
+        <a class="has-text-dark u-email" href="mailto:tony@tonyburns.net" rel="me"><i
+            class="far fa-envelope fa-2x"></i></a>
+        &nbsp;
+        <a class="has-text-dark u-url" href="https://www.linkedin.com/in/tonyhburns/" rel="me"><i
+            class="fab fa-linkedin fa-2x"></i></a>
+        &nbsp;
+        <a class="has-text-dark u-url" href="https://github.com/craftyphotons" rel="me"><i
+            class="fab fa-github fa-2x"></i></a>
+        &nbsp;
+        <a class="has-text-dark u-url" href="https://twitter.com/craftyphotons" rel="me"><i
+            class="fab fa-twitter fa-2x"></i></a>
+        &nbsp;
+        <a class="has-text-dark u-url" href="https://instagram.com/craftyphotons" rel="me"><i
+            class="fab fa-instagram fa-2x"></i></a>
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container pt-6">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        {{ $pag := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) 10 }}
+        {{ range $pag.Pages }}
+        {{ partial "list-post.html" . }}
+        {{ end }}
+
+        {{ partial "pagination.html" . }}
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 {{ end }}

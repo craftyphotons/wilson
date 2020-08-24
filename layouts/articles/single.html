@@ -1,58 +1,48 @@
 {{ define "main" }}
-{{ partial "nav.html" . }}
-<main id="main" aria-role="main">
-  <div class="container pl-2 pr-2">
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <article class="h-entry">
-          <div class="content e-content">
-            <header class="mb-6">
-              <h1 class="u-name">{{ .Param "name" }}</h1>
+<article class="h-entry">
+  <div class="content e-content">
+    <header class="mb-6">
+      <h1 class="u-name">{{ .Param "name" }}</h1>
 
-              <div class="media">
-                <div class="media-content">
-                  <div class="content">
-                    <div class="level">
-                      <div class="level-left">
-                        <div class="level-item">
-                          <small>
-                            <time class="dt-published"
-                              datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
-                              {{- dateFormat "Jan 2, 2006" .Date.Local -}}
-                            </time>
-                          </small>
-                        </div>
-                      </div>
-                      <div class="level-right">
-                        {{ if isset .Params "categories" }}
-                        <div class="tags">
-                          {{ range (.Param "categories") }}
-                          <span class="tag">#<span class="p-category">{{ . }}</span></span>
-                          {{ end }}
-                        </div>
-                        {{ end }}
-                      </div>
-                    </div>
-                  </div>
+      <div class="media">
+        <div class="media-content">
+          <div class="content">
+            <div class="level">
+              <div class="level-left">
+                <div class="level-item">
+                  <small>
+                    <time class="dt-published" datetime="{{ dateFormat "2006-01-02T15:04:05Z07:00" .Date.UTC }}">
+                      {{- dateFormat "Jan 2, 2006" .Date.Local -}}
+                    </time>
+                  </small>
                 </div>
               </div>
-            </header>
-
-            {{ if isset .Params "featured" }}
-            {{ with .Param "featured" }}
-            <figure class="image">
-              <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
-            </figure>
-            {{ end }}
-            {{ end }}
-
-            <div class="e-content">
-              {{- .Content -}}
+              <div class="level-right">
+                {{ if isset .Params "categories" }}
+                <div class="tags">
+                  {{ range (.Param "categories") }}
+                  <span class="tag">#<span class="p-category">{{ . }}</span></span>
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
             </div>
           </div>
-        </article>
+        </div>
       </div>
+    </header>
+
+    {{ if isset .Params "featured" }}
+    {{ with .Param "featured" }}
+    <figure class="image">
+      <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+    </figure>
+    {{ end }}
+    {{ end }}
+
+    <div class="e-content">
+      {{- .Content -}}
     </div>
   </div>
-</main>
+</article>
 {{ end }}
