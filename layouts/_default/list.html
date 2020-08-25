@@ -1,3 +1,5 @@
+{{ define "title" }}{{ .Section | title }} | {{ .Site.Title }}{{ end }}
+
 {{ define "main" }}
 {{ $pag := .Paginator 10 }}
 

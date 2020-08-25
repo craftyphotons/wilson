@@ -1,3 +1,28 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+
+{{ define "post-meta" }}
+<meta name="description" content="{{ .Param "metaDescription" }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ .Param "metaDescription" }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}img/opengraph-default.jpg">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:width" content="1200">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="{{ .Param "twitterUsername" }}">
+<meta name="twitter:site:id" content="{{ .Param "twitterUserID" }}">
+<meta name="twitter:creator" content="{{ .Param "twitterUsername" }}">
+<meta name="twitter:creator:id" content="{{ .Param "twitterUserID" }}">
+<meta name="twitter:description" content="{{ .Param "metaDescription" }}">
+<meta name="twitter:title" content="{{ .Site.Title }}">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}img/twitter-default.jpg">
+<meta name="twitter:image:alt" content="Tony Burns">
+<meta name="twitter:image:height" content="400">
+<meta name="twitter:image:width" content="400">
+{{ end }}
+
 {{ define "main" }}
 <section id="about" class="hero is-medium is-light h-card">
   <div class="hero-body">

@@ -1,3 +1,28 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "post-meta" }}
+<meta name="description" content="{{ .Param "metadata.description" }}">
+<meta property="og:url" content="{{ .Param "metadata.og_url" }}">
+<meta property="og:title" content="{{ .Param "metadata.og_title" }}">
+<meta property="og:description" content="{{ .Param "metadata.og_description" }}">
+<meta property="og:image" content="{{ .Param "metadata.og_image" }}">
+<meta property="og:image:height" content="{{ .Param "metadata.og_image_height" }}">
+<meta property="og:image:width" content="{{ .Param "metadata.og_image_width" }}">
+<meta property="og:type" content="{{ .Param "metadata.og_type" }}">
+<meta property="og:locale" content="{{ .Param "metadata.og_locale" }}">
+<meta name="twitter:card" content="{{ .Param "metadata.twitter_card" }}">
+<meta name="twitter:site" content="{{ .Param "metadata.twitter_site" }}">
+<meta name="twitter:site:id" content="{{ .Param "metadata.twitter_site_id" }}">
+<meta name="twitter:creator" content="{{ .Param "metadata.twitter_creator" }}">
+<meta name="twitter:creator:id" content="{{ .Param "metadata.twitter_creator:id" }}">
+<meta name="twitter:description" content="{{ .Param "metadata.twitter_description" }}">
+<meta name="twitter:title" content="{{ .Param "metadata.twitter_title" }}">
+<meta name="twitter:image" content="{{ .Param "metadata.twitter_image" }}">
+<meta name="twitter:image:alt" content="{{ .Param "metadata.twitter_image_alt" }}">
+<meta name="twitter:image:height" content="{{ .Param "metadata.twitter_image_height" }}">
+<meta name="twitter:image:width" content="{{ .Param "metadata.twitter_image_width" }}">
+{{ end }}
+
 {{ define "main" }}
 <article class="h-entry">
   <div class="content e-content">
