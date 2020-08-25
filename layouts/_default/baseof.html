@@ -33,6 +33,7 @@
   {{- range .Site.Params.links -}}
   <link rel="{{ .rel }}" href="{{ .href }}">
   {{- end -}}
+  <link rel="canonical" href="{{ .Permalink }}">
 
   {{ with .Site.Params.favicon }}
   <link rel="shortcut icon" href="/{{.}}" />
