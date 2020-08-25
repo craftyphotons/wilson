@@ -1,20 +1,8 @@
 <article class="card mb-5 h-entry">
   {{ if eq .Type "photos" }}
-  <div class="card-image">
-    {{ range first 1 (.Param "photos") }}
-    <figure class="image">
-      <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
-    </figure>
-    {{ end }}
-  </div>
+  {{ partial "post-photos.html" . }}
   {{ else if isset .Params "featured" }}
-  <div class="card-image">
-    {{ with .Param "featured" }}
-    <figure class="image">
-      <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
-    </figure>
-    {{ end }}
-  </div>
+  {{ partial "post-featured.html" . }}
   {{ end }}
   {{ partial "post-citations.html" . }}
   <div class="card-content">

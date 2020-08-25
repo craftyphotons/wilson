@@ -1,0 +1,16 @@
+<div class="card-image">
+  {{ range first 1 (.Param "photos") }}
+  <figure class="image">
+    <picture>
+      {{ if ne .post_webp_url "" }}
+      <source type="image/webp" srcset="{{ .post_webp_url }}">
+      {{ end }}
+      {{ if ne .post_jpeg_url "" }}
+      <img class="u-photo" src="{{ .post_jpeg_url }}" alt="{{ .alt }}">
+      {{ else }}
+      <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+      {{ end }}
+    </picture>
+  </figure>
+  {{ end }}
+</div>

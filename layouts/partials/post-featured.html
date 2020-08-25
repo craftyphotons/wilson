@@ -1,0 +1,7 @@
+<div class="card-image">
+  {{ with .Param "featured" }}
+  <figure class="image">
+    <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+  </figure>
+  {{ end }}
+</div>
