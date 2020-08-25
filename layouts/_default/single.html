@@ -1,16 +1,16 @@
 {{ define "title" }}
 {{ if or (eq .Type "audio") (eq .Type "notes") (eq .Type "photos") (eq .Type "videos") }}
-"{{ .Content | plainify }}"
+"{{- .Content | plainify | chomp -}}"
 {{ else if eq .Type "bookmark" }}
-"{{ .Param "cite.name" }}" - Bookmark
+"{{- .Param "cite.name" -}}" - Bookmark
 {{ else if eq .Type "like" }}
-"{{ .Param "cite.name" }}" - Like
+"{{- .Param "cite.name" -}}" - Like
 {{ else if eq .Type "reply" }}
-"{{ .Content | plainify }}" - Reply to {{ .Param "cite.author.name" }}
+"{{- .Content | plainify | chomp -}}" - Reply to {{ .Param "cite.author.name" }}
 {{ else if eq .Type "repost" }}
-"{{ .Param "cite.title" }}" - Repost
+"{{- .Param "cite.title" -}}" - Repost
 {{ else }}
-{{ .Title }}
+{{- .Title -}}
 {{ end }}
 | {{ .Site.Title }}
 {{ end }}
