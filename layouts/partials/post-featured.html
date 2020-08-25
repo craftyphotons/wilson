@@ -1,7 +1,13 @@
 <div class="card-image">
   {{ with .Param "featured" }}
   <figure class="image">
-    <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+    <picture>
+      {{ if ne .wilson_post_url "" }}
+      <img class="u-photo" src="{{ .wilson_post_url }}" alt="{{ .alt }}">
+      {{ else }}
+      <img class="u-photo" src="{{ .url }}" alt="{{ .alt }}">
+      {{ end }}
+    </picture>
   </figure>
   {{ end }}
 </div>
